@@ -18,7 +18,7 @@ public class TasksTest {
     ChromeOptions chromeOptions = new ChromeOptions();
     WebDriver driver = new RemoteWebDriver(new URL("http://192.168.3.104:4444"), chromeOptions);
     //WebDriver driver = new ChromeDriver();
-    driver.navigate().to("http://127.0.0.1:8001/tasks");
+    driver.navigate().to("http://172.25.128.1:8001/tasks");
     driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
     return driver;
   }
