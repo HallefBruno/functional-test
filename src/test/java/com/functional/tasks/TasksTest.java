@@ -23,7 +23,52 @@ public class TasksTest {
     WebDriver driver = acessarFront();
     try {
       driver.findElement(By.id("addTodo")).click();
-      driver.findElement(By.id("task")).sendKeys("Teste via selenium");
+      driver.findElement(By.id("task")).sendKeys("Teste via selenium 0");
+      driver.findElement(By.id("dueDate")).sendKeys(dueDate());
+      driver.findElement(By.id("saveButton")).click();
+      String message = driver.findElement(By.id("message")).getText();
+      Assert.assertEquals("Sucess!", message);
+    } finally {
+      driver.quit();
+    }
+  }
+  
+  @Test
+  public void deveSalvarTaskComSucesso1() {
+    WebDriver driver = acessarFront();
+    try {
+      driver.findElement(By.id("addTodo")).click();
+      driver.findElement(By.id("task")).sendKeys("Teste via selenium 1");
+      driver.findElement(By.id("dueDate")).sendKeys(dueDate());
+      driver.findElement(By.id("saveButton")).click();
+      String message = driver.findElement(By.id("message")).getText();
+      Assert.assertEquals("Sucess!", message);
+    } finally {
+      driver.quit();
+    }
+  }
+  
+  @Test
+  public void deveSalvarTaskComSucesso2() {
+    WebDriver driver = acessarFront();
+    try {
+      driver.findElement(By.id("addTodo")).click();
+      driver.findElement(By.id("task")).sendKeys("Teste via selenium 2");
+      driver.findElement(By.id("dueDate")).sendKeys(dueDate());
+      driver.findElement(By.id("saveButton")).click();
+      String message = driver.findElement(By.id("message")).getText();
+      Assert.assertEquals("Sucess!", message);
+    } finally {
+      driver.quit();
+    }
+  }
+  
+  @Test
+  public void deveSalvarTaskComSucesso3() {
+    WebDriver driver = acessarFront();
+    try {
+      driver.findElement(By.id("addTodo")).click();
+      driver.findElement(By.id("task")).sendKeys("Teste via selenium 3");
       driver.findElement(By.id("dueDate")).sendKeys(dueDate());
       driver.findElement(By.id("saveButton")).click();
       String message = driver.findElement(By.id("message")).getText();
